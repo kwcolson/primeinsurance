@@ -65,7 +65,7 @@ namespace CSharp
         [InlineData("aaa12345", false)]
         [InlineData("aA1234567", false)]
         [InlineData("aA12345678", false)]
-        public void IsTwoAlphaSix(string str, bool valid)
+        public void IsOneAlphaSixNumeric(string str, bool valid)
         {
             Assert.Equal(DriverLicenseUtils.OneAlphaSixNumeric(str), valid);
         }
@@ -78,7 +78,7 @@ namespace CSharp
         [InlineData("aaa12345", false)]
         [InlineData("a1234567", true)]
         [InlineData("aA12345678", false)]
-        public void IsTwoAlphaSeven(string str, bool valid)
+        public void IsOneAlphaSevenNumeric(string str, bool valid)
         {
             Assert.Equal(DriverLicenseUtils.OneAlphaSevenNumeric(str), valid);
         }
@@ -91,7 +91,7 @@ namespace CSharp
         [InlineData("aaa12345", false)]
         [InlineData("aA1234567", false)]
         [InlineData("A12345678", true)]
-        public void IsTwoAlphaEight(string str, bool valid)
+        public void IsOneAlphaEightNumeric(string str, bool valid)
         {
             Assert.Equal(DriverLicenseUtils.OneAlphaEightNumeric(str), valid);
         }
